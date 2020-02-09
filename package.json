@@ -6,9 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "node": "10.16.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nilkkapaineet/pp.git"
@@ -17,6 +14,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nilkkapaineet/pp/issues"
+  },
+  "engines": {
+    "node": "10.16.0"
   },
   "homepage": "https://github.com/nilkkapaineet/pp#readme",
   "devDependencies": {
