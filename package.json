@@ -1,37 +1,24 @@
 {
-  "name": "pp1",
+  "name": "pisteet-api",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "pisteet API",
   "main": "index.js",
+  "engines": {
+    "node": "11.x"
+  },
   "scripts": {
     "start": "node index.js",
+    "start:dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nilkkapaineet/pp.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nilkkapaineet/pp/issues"
-  },
-  "engines": {
-    "node": "10.16.0"
-  },
-  "homepage": "https://github.com/nilkkapaineet/pp#readme",
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
-  },
   "dependencies": {
-    "cool-ascii-faces": "^1.3.4",
-    "ejs": "^2.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "pg": "^7.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
