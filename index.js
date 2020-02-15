@@ -1,20 +1,25 @@
+// riippuvuudet rajapinnalle
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const { pool } = require('./config')
-
 const app = express()
-
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 
+// /pisteet -api
+// hakee listan, jossa json-tieto pelaajien id, username, pisteet
 const getPisteet = (request, response) => {
   pool.query('SELECT * FROM pisteet', (error, results) => {
     if (error) {
       throw error
     }
+    // saadun datan käsittely
     response.status(200).json(results.rows)
+    results.rows.forEach(element => {
+      console.log(element.username + ': ' + element.pisteet)  
+    })
   })
 }
 
